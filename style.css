@@ -91,3 +91,35 @@ p {
     width: 90%;
     float: right;
 }
+
+.contentSectionWork {
+    height: auto;
+    display: inline-block;
+}
+
+.contentSection div {
+    text-align: right;
+    width: 90%;
+    float: right;
+    padding: 100px;
+    height: auto;
+}
+.pictureBig {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 20px;
+}
+
+.pictureSmall {
+    height: 250px;
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+}
