@@ -41,6 +41,19 @@ body {
     margin-left: 25px;
 }
 
+.subtitle {
+    float: right;
+    position: relative;
+    text-align: center;
+    top: 400px;
+    right: 30px;
+    font-size: 72px;
+    background-color: lightblue;
+    color: black;
+    padding-left: 50px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 a {
     color: lightblue;
     text-decoration: underline;
@@ -63,7 +76,8 @@ p {
 
 .content {
     width: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -74,52 +88,119 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #0072bb;
+    display: flex;
 }
 
-.contentSection h2 {
+.headerSection h2 {
     margin-bottom: 20px;
     font-size: 36px;
     text-align: right;
-    width: 10%;
-    float: left;
     padding-right: 20px;
     border-right: 5px solid #0072bb;
     height: 100%;
+    flex-grow: 1;
 }
-.contentSection p {
+.contentSubsection p {
     text-align: right;
-    width: 90%;
-    float: right;
+    padding-left: 20px;
+    flex-grow: 2;
+
 }
 
 .contentSectionWork {
-    height: auto;
-    display: inline-block;
+    min-height: 300px;
+    height: 100%;
+    display: flex;
+    
+   
 }
 
-.contentSection div {
+.contentSubsection {
+    flex-grow:3;
+}
+
+.headerSection {
+    flex-grow:1;
+}
+
+.pictureContainer {
+    position:relative;
+    text-align: center;
+    width:50%;
+    padding: 20px;
+}
+
+.pictureContainerBig {
+    position:relative;
+    text-align: center;
+    width:100%;
+    padding: 20px;
+}
+
+.workSection {
     text-align: right;
-    width: 90%;
-    float: right;
     padding: 100px;
     height: auto;
+    display: flex;
+    flex-wrap:wrap;
+    flex-grow: 3;
 }
+
+.workSection h3 {
+    display:flex;
+    flex-direction:column;
+   position: absolute;
+   justify-content: center;
+   bottom: 80px;
+   left: 20px;
+   background-color: lightblue;
+   color: black;
+   height: 40px;
+   width: 200px;
+   font-size: 24px ;
+}
+
+.workSection p {
+    display:flex;
+    flex-direction:column;
+   position: absolute;
+   justify-content: center;
+   bottom: 50px;
+   left: 20px;
+   background-color: lightblue;
+   color: black;
+   height: 40px;
+   width: 200px;
+}
+
 .pictureBig {
     width: 100%;
     height: auto;
     float: right;
-    padding: 20px;
+    border-style: solid;
+    border-width: thick;
+    border-color: lightblue;
+    position:relative;
+    opacity: 80%;
+
+}
+
+.pictureBig:hover {
+    opacity: 100%;
 }
 
 .pictureSmall {
     height: 250px;
     float: left;
-    width: 50%;
-    padding: 20px;
+    width: 100%;
+    position:relative;
+    border-style: solid;
+    border-width: thick;
+    border-color: lightblue;
+    opacity: 80%;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
+.pictureSmall:hover {
+    opacity: 100%
 }
+
